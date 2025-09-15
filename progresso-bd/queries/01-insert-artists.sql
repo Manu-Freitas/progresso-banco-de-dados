@@ -9,3 +9,11 @@ CREATE TABLE artistas (
     musica_mais_ouvida VARCHAR(50),
     ativo BOOLEAN DEFAULT TRUE,
 );
+
+INSERT INTO artistas (nome, tipo, membros, genero_musical, pais_origem, ano_inicio, musica_mais_ouvida, ativo) 
+VALUES
+('Coldplay', 'Banda', 4, 'Pop', 'Reino Unido', 1996, 'Yellow', TRUE);
+('Veigh', 'Cantor', 1, 'trap', 'Brasil', 2019, 'Artista genérico', TRUE);
+('Morada', 'Bnada', 5, 'Gospel', 'Brasil', 2009, '' )
+;
+
