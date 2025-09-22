@@ -1,0 +1,35 @@
+CREATE DATABASE beautytechdb;
+
+CREATE TABLE cosmeticos (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    marca VARCHAR(50) NOT NULL,
+    preco DECIMAL(10,2) NOT NULL,
+    categoria VARCHAR(30) NOT NULL,
+    estoque INT DEFAULT 0
+);
+
+INSERT INTO cosmeticos (nome, marca, preco, categoria, estoque)
+VALUES
+("Protetor Solar Facial", "La Roche-Posay", 89.90, "Proteção Solar", 150),
+("Sérum Facial Vitamina C", "Skinceuticals", 350.00, "Tratamento", 75),
+("Hidratante Facial Dramatically Different", "Clinique", 129.90, "Hidratação", 200),
+("Água Micelar", "Bioderma", 59.90, "Limpeza", 300),
+("Gel de Limpeza Effaclar Concentrado", "La Roche-Posay", 69.90, "Limpeza", 120);
+
+INSERT INTO skincare_products (nome, marca, preco, categoria, estoque) VALUES
+('Sérum Corretor Pigmentbio C-G', 'Bioderma', 189.90, 'Tratamento', 80),
+('Creme Hidratante Lipikar Baume AP+', 'La Roche-Posay', 119.50, 'Hidratação Corporal', 100),
+('Protetor Solar Minesol Oil Control FPS 70', 'ROC', 95.00, 'Proteção Solar', 110),
+('Sérum Facial Retinol B3', 'La Roche-Posay', 229.90, 'Tratamento', 65),
+('Gel de Limpeza Facial Normaderm Phytosolution', 'Vichy', 69.90, 'Limpeza', 130),
+('Creme para Área dos Olhos', 'Principia', 49.00, 'Tratamento', 95),
+('Água Termal', 'Avène', 55.00, 'Tratamento', 250),
+('Protetor Solar Facial com Cor Anthelios Airlicium FPS 70', 'La Roche-Posay', 99.90, 'Proteção Solar', 140),
+('Hidratante Facial Toleriane Sensitive', 'La Roche-Posay', 85.00, 'Hidratação', 170),
+('Esfoliante Facial Eucerin DermoPURIFYER', 'Eucerin', 75.00, 'Limpeza', 70),
+('Sérum Vitamina C Pura 10% Antiox C', 'Adcos', 289.00, 'Tratamento', 60),
+('Sabonete Líquido Syndet', 'Profuse', 65.00, 'Limpeza', 180),
+('Máscara Facial de Argila Pura', 'L’Oréal Paris', 39.90, 'Tratamento', 200),
+('Hidratante Facial Hydro Boost Water Gel', 'Neutrogena', 59.90, 'Hidratação', 220),
+('Protetor Solar Corporal Needs FPS 30', 'Needs', 29.90, 'Proteção Solar Corporal', 300);
