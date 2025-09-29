@@ -1,4 +1,4 @@
-CREATE DATABASE beautytechdb;
+CREATE DATABASE beautytechdb2;
 
 CREATE TABLE cosmeticos (
     id SERIAL PRIMARY KEY,
@@ -11,13 +11,11 @@ CREATE TABLE cosmeticos (
 
 INSERT INTO cosmeticos (nome, marca, preco, categoria, estoque)
 VALUES
-("Protetor Solar Facial", "La Roche-Posay", 89.90, "Proteção Solar", 150),
-("Sérum Facial Vitamina C", "Skinceuticals", 350.00, "Tratamento", 75),
-("Hidratante Facial Dramatically Different", "Clinique", 129.90, "Hidratação", 200),
-("Água Micelar", "Bioderma", 59.90, "Limpeza", 300),
-("Gel de Limpeza Effaclar Concentrado", "La Roche-Posay", 69.90, "Limpeza", 120);
-
-INSERT INTO skincare_products (nome, marca, preco, categoria, estoque) VALUES
+('Protetor Solar Facial', 'La Roche-Posay', 89.90, 'Proteção Solar', 150),
+('Sérum Facial Vitamina C', 'Skinceuticals', 350.00, 'Tratamento', 75),
+('Hidratante Facial Dramatically Different', 'Clinique', 129.90, 'Hidratação', 200),
+('Água Micelar', 'Bioderma', 59.90, 'Limpeza', 300),
+('Gel de Limpeza Effaclar Concentrado', 'La Roche-Posay', 69.90, 'Limpeza', 120),
 ('Sérum Corretor Pigmentbio C-G', 'Bioderma', 189.90, 'Tratamento', 80),
 ('Creme Hidratante Lipikar Baume AP+', 'La Roche-Posay', 119.50, 'Hidratação Corporal', 100),
 ('Protetor Solar Minesol Oil Control FPS 70', 'ROC', 95.00, 'Proteção Solar', 110),
@@ -30,6 +28,34 @@ INSERT INTO skincare_products (nome, marca, preco, categoria, estoque) VALUES
 ('Esfoliante Facial Eucerin DermoPURIFYER', 'Eucerin', 75.00, 'Limpeza', 70),
 ('Sérum Vitamina C Pura 10% Antiox C', 'Adcos', 289.00, 'Tratamento', 60),
 ('Sabonete Líquido Syndet', 'Profuse', 65.00, 'Limpeza', 180),
-('Máscara Facial de Argila Pura', 'L’Oréal Paris', 39.90, 'Tratamento', 200),
+('Máscara Facial de Argila Pura', 'LOreal Paris', 39.90, 'Tratamento', 200),
 ('Hidratante Facial Hydro Boost Water Gel', 'Neutrogena', 59.90, 'Hidratação', 220),
 ('Protetor Solar Corporal Needs FPS 30', 'Needs', 29.90, 'Proteção Solar Corporal', 300);
+
+SELECT * FROM cosmeticos;
+
+//UPDATE
+
+UPDATE cosmeticos SET preco = preco - preco * 0.20
+WHERE categoria = 'Skincare';
+
+UPDATE cosmeticos SET estoque = estoque + 50;
+
+UPDATE cosmeticos SET preco = preco + 0.15
+WHERE marca = 'Principia';
+
+SELECT * FROM cosmeticos;
+
+UPDATE cosmeticos SET preco = preco - preco * 0.1000000000
+WHERE estoque > 200;
+
+//DELETE
+
+DELETE FROM cosmeticos
+WHERE estoque < 180;
+
+DELETE FROM cosmeticos
+WHERE preco < 30;
+
+DELETE FROM cosmeticos
+WHERE marca = 'Principia';
