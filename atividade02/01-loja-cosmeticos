@@ -58,4 +58,9 @@ DELETE FROM cosmeticos
 WHERE preco < 30;
 
 DELETE FROM cosmeticos
-WHERE marca = 'Principia';
+WHERE marca = 'Bioderma';
+
+DELETE FROM cosmeticos
+WHERE estoque > 220 AND estoque < 260;
+
+DELETE FROM cosmeticos; 
